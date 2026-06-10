@@ -1,0 +1,30 @@
+{{ config(materialized='table') }}
+
+SELECT
+    station_id,
+    "date",
+    avg_wind,
+    awnd_attr,
+    precipitation,
+    precipitation_attr,
+    snow,
+    snow_attr,
+    snow_depth,
+    snow_depth_attr,
+    temp_max,
+    temp_max_attr,
+    temp_min,
+    temp_min_attr,
+    wind_dir_2,
+    wind_dir_2_attr,
+    wind_dir_5,
+    wind_dir_5_attr,
+    wind_speed_2,
+    wind_speed_2_attr,
+    wind_speed_5,
+    wind_speed_5_attr,
+    fog,
+    fog_attr,
+    thunder,
+    thunder_attr
+FROM {{ ref('stg_weather') }}

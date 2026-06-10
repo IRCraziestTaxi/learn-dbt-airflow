@@ -1,0 +1,13 @@
+analytics:
+  outputs:
+    dev:
+      type: duckdb
+      path: /Users/user/projects/learn-dbt-airflow/warehouse/dev.duckdb
+      threads: 2
+
+    prod:
+      type: duckdb
+      path: prod.duckdb
+      threads: 4
+
+  target: dev
